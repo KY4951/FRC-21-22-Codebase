@@ -386,23 +386,23 @@ public class Robot extends TimedRobot {
 
     
 
-     double ultrasonicDist = ultrasonic.getVoltage()*vtd;
-    // if(50 <= ultrasonicDist && ultrasonicDist <= 62)
+    double ultrasonicDist = ultrasonic.getVoltage()*vtd;
+    if(50 <= ultrasonicDist && ultrasonicDist <= 62)
 
-    //   //LIGHTS ARE GREEN
-    //   // System.out.println("in range");
-    //   led.set (0.77);
-    // }else if(42 <= ultrasonicDist && ultrasonicDist <= 70){ // 8 up 8 down range, for when we are apporaching shooting range
-    //   // set to flashing orange
+      //LIGHTS ARE GREEN
+      // System.out.println("in range");
+      led.set (0.77);
+    }else if(42 <= ultrasonicDist && ultrasonicDist <= 70){ // 8 up 8 down range, for when we are apporaching shooting range
+      // set to flashing orange
 
-    //   led.set(0.65);
-    // }else if(1000 <= ultrasonicDist && ultrasonicDist <= -1){ // low goal zone
-    //   // to be implemented
-    //   led.set(0.57);
-    // }else{
-    //   led.set(-0.99);
-    //   // System.out.println("NOT IN RANGE NOT IN RANGE");
-    // }
+      led.set(0.65);
+    }else if(1000 <= ultrasonicDist && ultrasonicDist <= -1){ // low goal zone
+      // to be implemented
+      led.set(0.57);
+    }else{
+      led.set(-0.99);
+      // System.out.println("NOT IN RANGE NOT IN RANGE");
+    }
 
     // if(c.getLeftBumperPressed()) // decrement flywheel speed when left bumper pressed.
       // lock.set(Value.kForward);
